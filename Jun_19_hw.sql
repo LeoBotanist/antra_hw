@@ -75,7 +75,7 @@ select distinct od.productId
 from [order details] od
 join orders o
 on od.orderId = o.orderId
-where o.orderDate >= DATEADD(YEAR, -25, GETDATE())
+where o.orderDate >= DATEADD(YEAR, -27, GETDATE())
 
 -- 15.
 select top 5 ShipPostalCode
@@ -86,7 +86,7 @@ order by Count(ShipPostalCode) desc
 -- 16.
 select top 5 ShipPostalCode
 from orders
-where orderDate >= DATEADD(YEAR, -25, GETDATE())
+where orderDate >= DATEADD(YEAR, -27, GETDATE())
 group by ShipPostalCode
 order by Count(ShipPostalCode) desc
 
